@@ -1,0 +1,35 @@
+import json
+import urllib.request
+import pandas as pd
+import requests
+
+url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/1.0_day.geojson"
+#alldata = pd.DataFrame(['Latitude', 'Longitude', 'PlaceName'], index = None)
+alldata = pd.DataFrame({
+                        'Latitude':[''],
+                        'Longitude' :[''],
+                        'PlaceName':['']
+                        })
+print(alldata)
+response = urllib.request.urlopen(url)
+data = json.loads(response.read())
+features = data["features"]
+for feature in features:
+    place = feature["properties"]["place"]
+    latitude = feature["geometry"]["coordinates"][1]
+    longitude = feature["geometry"]["coordinates"][0]
+    #print("Place: ", place)
+    #print("Latitude: ", latitude)
+    #print("Longitude: ", longitude)
+    newrow = [latitude, longitude, place]
+    alldata.loc[len(alldata.index)] = newrow
+print(alldata)
+
+url2 = requests.get("https://public.opendatasoft.com/api/records/1.0/search/?dataset=significant-earthquake-database&q=&rows=10000&facet=country&facet=state&facet=location_name&facet=region_code&facet=deaths_description&facet=missing_description&facet=injuries_description&facet=damage_description&facet=houses_destroyed_description&facet=houses_damaged_description&facet=total_deaths_description&facet=total_missing_description&facet=total_injuries_description&facet=total_damage_description&facet=total_houses_destroyed_description")
+u2d = url2.json()
+countries = [record["fields"]["country"] for record in u2d["records"]]
+ctydf = pd.DataFrame(countries, columns=["Country"])
+counts = ctydf["Country"].value_counts().reset_index()
+counts.columns = ["Country", "Count"]
+print(ctydf)
+print(counts)
