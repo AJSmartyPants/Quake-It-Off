@@ -2,6 +2,7 @@ All the project requirements:
 
 Python 3.11.1
 streamlit 1.20.0
+plotly 5.13.1
 geocoder 1.38.1
 pandas 1.5.3
 pickle (built-in library in Python)
