@@ -34,21 +34,21 @@ The factors are totally independent parameters, and I recognize that: Quake It O
 
 It's better to have false alarms when an earthquake is predicted but one doesn't occur, than to have no idea for when an earthquake is not predicted, but one occurs. Like we always say, better safe than sorry.
 
-The best part is: Our predictions are catered to those with anxiety and stress as well. On the app, I clarify that these predictions mean to warn. ![](RackMultipart20230318-1-qrj34g_html_2755421e43a37cf0.png)
-
-![](RackMultipart20230318-1-qrj34g_html_2667e661f94b9fb8.png)
+The best part is: Our predictions are catered to those with anxiety and stress as well. On the app, I clarify that these predictions mean to warn. 
+![](Images/HomePage1)
+![](Images/HomePage2)
 
 The user can either view real-time and constantly updated earthquakes occurring across the globe (they can choose whether they want to view earthquakes that have happened in the past hour, day, week, or month), OR they can use a double-ended slider to choose a range of years to see the earthquakes that have occurred in that range. The user can choose whether they want to see the map of earthquakes in 2D or 3D. The color of the scatter points on the map represents the magnitude of the earthquake: The legend on the right shows what magnitude scale the colors represent. The size of the scatter points represents the depth of the earthquake. When you hover over a scatter point, you can see the earthquake's exact magnitude, depth, latitude, longitude, and place name/year based on the options you have chosen.
 
-Everything is customizable, accessible, and easy to interpret! ![](RackMultipart20230318-1-qrj34g_html_8c7f20c8edce5b1e.png)
-
-![](RackMultipart20230318-1-qrj34g_html_25ea50d3f0e96b76.png)
+Everything is customizable, accessible, and easy to interpret! 
+![](Images/Map1)
+![](Images/Map2)
 
 The Information Hub provides lots of vital information about earthquakes, safety, how to do first aid, terminology, and more. A drop-down allows you to choose a main topic, and subtopic in some cases. The information is presented as multimedia, with helpful infographics and images alongside readable and concise textual knowledge.
 
-![](RackMultipart20230318-1-qrj34g_html_aaa9e8fa2c36c545.png) ![](RackMultipart20230318-1-qrj34g_html_cb54d13eab113b74.png)
-
-![](RackMultipart20230318-1-qrj34g_html_d79d936a8a7af9b5.png)
+![](Images/InfoHub1) 
+![](Images/InfoHub2)
+![](Images/InfoHub3)
 
 The Route Recommendation section uses Artificial Intelligence, along with real-time earthquake data, to determine and recommend the safest routes to evacuate an earthquake-affected or earthquake-prone area.
 
