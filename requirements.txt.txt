@@ -1,0 +1,17 @@
+All the project requirements:
+
+Python 3.11.1
+streamlit 1.20.0
+geocoder 1.38.1
+pandas 1.5.3
+pickle (built-in library in Python)
+numpy 1.23.5
+time (built-in library in Python)
+json (built-in library in Python)
+urllib3 1.26.14
+array module
+scikit-learn 1.2.1
+ml8
+
+A good internet connection (WiFi)
+A good amount of RAM for when you are training the model
