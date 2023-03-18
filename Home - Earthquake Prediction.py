@@ -41,13 +41,13 @@ g = geocoder.ip('me')
 latitude = g.latlng[0]
 longitude = g.latlng[1]
 country = g.country
-print(country)
-print(latitude, longitude)
-if st.button("Refresh Location"):
+#print(country)
+#print(latitude, longitude)
+if st.button("Refresh Location/Prediction"):
     latitude = g.latlng[0]
     longitude = g.latlng[1]
-    print(latitude, longitude)
-    print(time.time())
+    #print(latitude, longitude)
+    #print(time.time())
 ydf = pd.DataFrame({'LATITUDE': [latitude], 'LONGITUDE': [longitude]})
 
 model = pickle.load(open("EQPModel.pkl", 'rb'))
