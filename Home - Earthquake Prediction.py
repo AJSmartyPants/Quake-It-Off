@@ -74,7 +74,6 @@ else:
     st.error("If the predicted earthquake occurs, high chance of you feeling it. Be safe and prepared!")
     st.info("Earthquake type: Strong/Major/Great")
 
-
 st.subheader("Current earthquakes near you:")
 
 import plotly.express as px
@@ -293,6 +292,30 @@ if (eqmap == "Choose the Range"):
             roll=0
             ))
         fmap = st.plotly_chart(fig, theme=None, use_container_width=True)
+
+st.subheader("Future predictions:")
+if(g.country == 'IN' or 'QA' or 'SA' or 'AD' or 'SE' or 'NO' or 'FI' or 'MT' or 'BB'):
+        st.success("Low chance of any earthquakes happening at your location.")
+counter = 0
+while counter<=6:
+    print(time.time()+counter*86400)
+    inputx1 = np.reshape([latitude, longitude, time.time()+counter*86400], (1, -1))
+    pred1 = pd.DataFrame(model.predict(inputx1), columns=['Depth', 'Magnitude'], index=None)
+    counter = counter + 1
+    eqpdepthf = pred1.iloc[0]['Depth']
+    eqpmagf = round(pred1.iloc[0]['Magnitude'], 1)
+    st.write(str(counter),"day(s) from today: ")
+    st.write("Depth: ",str(eqpdepthf))
+    st.write("Magnitude: ",str(eqpmagf))
+    if(eqpmagf<=2):
+        st.success("Low chance of feeling the earthquake, or of the earthquake happening.")
+        st.info("Earthquake type: Minor/Light")
+    elif(eqpmagf<5 and eqpmagf>2):
+        st.warning("Medium chance of feeling the earthquake, or of the earthquake happening at your location.")
+        st.info("Earthquake type: Light/Moderate")
+    else:
+        st.error("If the predicted earthquake occurs, high chance of you feeling it. Be safe and prepared!")
+        st.info("Earthquake type: Strong/Major/Great")
 
 #hide_table_row_index = """
 #            <style>
