@@ -1,4 +1,4 @@
-# **Quake-It-Off**
+# **Quake It Off**
 
 By Anika Jha
 
