@@ -240,7 +240,7 @@ data['year']=data['DateTime'].dt.year
 #    return location
 #data['place'] = data.apply(lambda row: placename(row['latitude'], row['longitude']), axis=1)
 #print(data.head(10))
-print(data.shape)
+#print(data.shape)
 
 def cusmap(minyear, maxyear):
     df = data[(data['year'] >= minyear) & (data['year'] <= maxyear)]
@@ -298,7 +298,7 @@ if(g.country == 'IN' or 'QA' or 'SA' or 'AD' or 'SE' or 'NO' or 'FI' or 'MT' or 
         st.success("Low chance of any earthquakes happening at your location.")
 counter = 0
 while counter<=6:
-    print(time.time()+counter*86400)
+    #print(time.time()+counter*86400)
     inputx1 = np.reshape([latitude, longitude, time.time()+counter*86400], (1, -1))
     pred1 = pd.DataFrame(model.predict(inputx1), columns=['Depth', 'Magnitude'], index=None)
     counter = counter + 1
