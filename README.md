@@ -52,8 +52,8 @@ The Information Hub provides lots of vital information about earthquakes, safety
 
 The Route Recommendation section uses Artificial Intelligence, along with real-time earthquake data, to determine and recommend the safest routes to evacuate an earthquake-affected or earthquake-prone area.
 
-![Route Selection Map](?raw=true)
-![Route Output Map](?raw=true)
+![Route Selection Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Route1.png?raw=true)
+![Route Output Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Route2.png?raw=true)
 
 Notifications are coming soon!
 
