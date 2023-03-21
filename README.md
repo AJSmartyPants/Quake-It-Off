@@ -36,21 +36,24 @@ It's better to have false alarms when an earthquake is predicted but one doesn't
 
 The best part is: Our predictions are catered to those with anxiety and stress as well. On the app, I clarify that these predictions mean to warn. 
 ![Home Page Image 1](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/HomePage1.png?raw=true)
-![](Images/HomePage2)
+![Home Page Image 2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/HomePage2.png?raw=true)
 
 The user can either view real-time and constantly updated earthquakes occurring across the globe (they can choose whether they want to view earthquakes that have happened in the past hour, day, week, or month), OR they can use a double-ended slider to choose a range of years to see the earthquakes that have occurred in that range. The user can choose whether they want to see the map of earthquakes in 2D or 3D. The color of the scatter points on the map represents the magnitude of the earthquake: The legend on the right shows what magnitude scale the colors represent. The size of the scatter points represents the depth of the earthquake. When you hover over a scatter point, you can see the earthquake's exact magnitude, depth, latitude, longitude, and place name/year based on the options you have chosen.
 
 Everything is customizable, accessible, and easy to interpret! 
-![](Images/Map1)
-![](Images/Map2)
+![Map Example 1](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Map1.png?raw=true)
+![Map Example 2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Map2.png?raw=true)
 
 The Information Hub provides lots of vital information about earthquakes, safety, how to do first aid, terminology, and more. A drop-down allows you to choose a main topic, and subtopic in some cases. The information is presented as multimedia, with helpful infographics and images alongside readable and concise textual knowledge.
 
-![](Images/InfoHub1) 
-![](Images/InfoHub2)
-![](Images/InfoHub3)
+![InfoHub1](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub1.png?raw=true) 
+![InfoHub2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub2.png?raw=true)
+![InfoHub3](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub3.png?raw=true)
 
 The Route Recommendation section uses Artificial Intelligence, along with real-time earthquake data, to determine and recommend the safest routes to evacuate an earthquake-affected or earthquake-prone area.
+
+![Route Selection Map](?raw=true)
+![Route Output Map](?raw=true)
 
 Notifications are coming soon!
 
@@ -67,11 +70,11 @@ Speaking of which, here are the future plans for this highly applicable app:
 
 Here is a brief competitor analysis that clearly shows that Quake It Off uses brand-new technologies and novel ideas to solve this real-world problem:
 
-![](RackMultipart20230318-1-qrj34g_html_e369c94804127336.png)
+![Brief Competitor Analysis Table](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/CompetitorAnalysis.png?raw=true)
 
 Creating this application was no easy feat, to say the least. I spent long days and nights, working around the clock, and racing against the universe, to finish it in 2 weeks! That too, with NO PRIOR KNOWLEDGE about machine learning! My Clevered mentor, Ms. Shivani, was the one who brought me into the deep, intense, intricate, and infinite-possibility world of AI and ML. It was like stepping onto the tip of the iceberg, only to notice that under the water, the iceberg never ended!
 
-A huge shoutout to Dr. Ken Khan for his irreplaceable and valuable insights into my project.
+A huge shoutout to Dr. Ken Kahn for his irreplaceable and valuable insights into my project.
 
 I am so proud of Quake It Off, and I hope my efforts can greatly contribute to the world of earthquake prediction and efficient disaster response.
 
@@ -87,26 +90,26 @@ The user manual has all the details of the project, and how to use it:
 
 Be sure to go through it!
 
-Here is my project video:
+Here is my project video: [https://www.youtube.com/watch?v=9SH10BF8O3k](https://www.youtube.com/watch?v=9SH10BF8O3k)
 
 Enjoy!
 
-I'm Anika, a 13-year-old learning enthusiast and a female philomath. I work in an NGO (Distressed Children and Infants International). My main commendable titles and laurels are below. I love learning, and my fields of interest lie in physics, chemistry, math, programming, and literature! I am a confident self-learner. People have told me that I have incredible leadership skills and quality cognitive ability. I enjoy reading, swimming, and ice-skating in my free time.
+*I'm Anika, a 13-year-old learning enthusiast and a female philomath. I work in an NGO (Distressed Children and Infants International). My main commendable titles and laurels are below. I love learning, and my fields of interest lie in physics, chemistry, math, programming, and literature! I am a confident self-learner. People have told me that I have incredible leadership skills and quality cognitive ability. I enjoy reading, swimming, and ice-skating in my free time.*
 
-• Developer of the Grand Prize Winner app: cHHange - It's Normal
+*• Developer of the Grand Prize Winner app: cHHange - It's Normal*
 
-• International winner in the OakCodeFest 24-hour hackathon twice
+*• International winner in the OakCodeFest 24-hour hackathon twice*
 
-• International winner in the TISBHacks hackathon
+*• International winner in the TISBHacks hackathon*
 
-• Ted-ED speaker: https://youtu.be/MPZkbC9kM8A
+*• Ted-ED speaker: [https://youtu.be/MPZkbC9kM8A](https://youtu.be/MPZkbC9kM8A)*
 
-• 3-time Best Delegate of Model United Nations
+*• 3-time Best Delegate of Model United Nations*
 
-• Author of 2 books
+*• Author of 2 books*
 
-• India's Top Young Problem Solver (HCL Jigsaw)
+*• India's Top Young Problem Solver (HCL Jigsaw)*
 
-• Honorary mention title holder in the Johns Hopkins University SCAT math test
+*• Honorary mention title holder in the Johns Hopkins University SCAT math test*
 
-• National winner in the SpALLENthon Spell Bee
+*• National winner in the SpALLENthon Spell Bee*
