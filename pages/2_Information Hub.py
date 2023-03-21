@@ -1,5 +1,6 @@
 # import module
 import streamlit as st
+import pandas as pd
 
 st.set_page_config(
     page_title="Quake It Off - Info Hub",
@@ -18,7 +19,42 @@ st.markdown("You may have to scroll down to see the information")
 
 minfo = st.selectbox("Please choose what you would like to learn about: ",
 ['None selected','Earthquakes', 'Spotting Natural Disasters', 'Safety Tips', 'Relevant First Aid'], index = 0)
-
+weqhi = pd.DataFrame(columns=['Type of Earthquake', 'Cause'])
+weqhi['Type of Earthquake'] = ['Tectonic Earthquake', 'Volcanic Earthquake', 'Collapse Earthquake', 'Explosion Earthquake']
+weqhi['Cause'] = ["The movement of tectonic plates is a geological fault that causes the earth's crust to break, resulting in an earthquake.", "Volcanic activities can cause disruptions on the earth's surface, causing shifts in the tectonic plates, and resulting in earthquakes.", "Human activities such as mining, tunnel, construction, etc. can produce seismic waves, which can cause earthquakes.", "The force that releases when a nuclear or chemical device is launched can cause earthquakes."]
+terminology = pd.DataFrame(columns=['Term', 'Meaning'])
+terminology['Term'] = ['Earthquake', 'Magnitude', 'Intensity', 'Focus or hypocenter', 'Epicenter', 'Body Waves', 'P wave & S wave', 'Shallow Focus Earthquake', 'Teleseism', 'Microseism', 'Micro earthquake', 'Accelogram', 'Accelograph', 'Focal Distance', 'Intermediate Focus Earthquake', 'Epicentral Distance', 'Foreshocks', 'Aftershocks', 'Benioff Zone', 'Destructive boundary', 'Fault', 'Active fault', 'Liquefaction', 'Magnitude/frequency relationship', 'Richter Scale', 'Rossi-Forrel Scale', 'Seismometer', 'Seismograph', 'Tsunami']
+terminology['Meaning'] = [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+]
+#print(weqhi)
 if(minfo == 'Earthquakes'):
     #print('Earthquakes chosen')
     eqbns = st.radio("What subtopic do you want to learn about?", ('Preparing for and Responding to Earthquakes', 'Predicting Earthquakes', 'Why & How Earthquakes Happen', 'Preventing Earthquakes', 'Where Earthquakes Happen', 'When Earthquakes Happen', 'Terminology'))
@@ -67,15 +103,34 @@ if(minfo == 'Earthquakes'):
                 \nThis application estimates the probability of an earthquake happening based on your location, and the magnitude and depth if an earthquake does occur. Our machine learning model is trained on the latitudes, longitudes, and times of when an earthquake has occured. These are totally independent parameters, and we recognize that: Our app is to provide preparedness and guidance for when our predictions DO come true, and it is a great way to keep track of current and past earthquakes across the globe as well.")
         st.subheader("What About Everything that People Who Predict the Future Say?")
     elif(eqbns == 'Why & How Earthquakes Happen'):
-        print('x')
+        st.image("https://caltechsites-prod.s3.amazonaws.com/scienceexchange/images/what-happens-earthquake-diagram_.original.png", caption="How an earthquake happens")
+        st.image("https://www.aljazeera.com/wp-content/uploads/2023/02/INTERACTIVE-How-do-earthquakes-happen.png?w=770&resize=770%2C769", caption="How an earthquake happens with explanation")
+        st.info("Earthquakes can occur in any intensity, which is so weak that they cannot be felt, that are violent enough to carry objects and people into the air and wreak havoc on entire cities. It is the movement of the Earth's surface that produces seismic waves as a result of the sudden release of energy in the Earth's lithosphere.")
+        st.table(weqhi)
     elif(eqbns == 'Preventing Earthquakes'):
-        print('x')
+        st.subheader("Can we prevent earthquakes?")
+        st.warning("No one can prevent an earthquake from happening: It's a natural disaster that occurs due to the movement of Earth's tectonic plates. And we have no control over that.\
+                   \nBut what we can do is PREPARE before the next one hits. The following earthquake preparation tips take a few hours to create a plan and organize supplies that will keep you safer.")
+        st.subheader("What and how should we prepare for earthquakes?")
+        st.info("Step 1: Secure Your Space\
+                \n• Secure your space by identifying hazards and securing moveable items.\
+                \nStep 2: Plan to be Safe\
+                \n• Plan to be safe by creating a disaster plan and deciding how you will communicate in an emergency.\
+                \nStep 3: Organize Disaster Supplies\
+                \n• Organize disaster supplies in convenient locations that can be accessed before, during, and after an earthquake\
+                \nStep 4: Minimize Financial Hardship\
+                \n• Minimize financial hardship by organizing important documents, strengthening your property, and considering insurance\
+                \n\nRefer to the 'Responding to Earthquakes' subtopic, and 'What to Do Before an Earthquake' section there for more tips.")
     elif(eqbns == 'Where Earthquakes Happen'):
-        print('x')
+        st.image("https://quantectum.com/Blogs/8_Ring_of_Fire.png", caption="Ring of Fire")
+        st.info("Earthquakes can occur anywhere, but they occur mainly along fault lines (planar or curved fractures in the rocks of Earth's crust), where compressional or tensional forces move rocks on opposite sides of a fracture. Faults extend from a few centimetres to many hundreds of kilometres. In addition, most of the world's earthquakes occur within the Ring of Fire, a long horseshoe-shaped belt of earthquake epicentres, volcanoes, and tectonic plate boundaries fringing the Pacific basin.")
+        st.success("Check out the maps on the home page and alter the settings to see if you can spot a pattern where most earthquakes occur!")
+        st.info("Some of the most earthquake-prone countries are: Indonesia is in a very active seismic zone, also, but by virtue of its larger size than Japan, it has more total earthquakes. Which country has the most earthquakes per unit area? This would probably be Tonga, Fiji, or Indonesia since they are all in extremely active seismic areas along subduction zones. Both China and Iran are in seismically active areas, have very long historical records, and have had many catastrophic earthquakes. Turkey is also worth mentioning in this category.")
     elif(eqbns == 'When Earthquakes Happen'):
-        print('x')
+        st.info("Earthquakes occur when tectonic plates struggle against each other, or due to other reasons that you can refer to in the 'Why & How Earthquakes Happen' subtopic. They can happen anytime, day or night, and are not yet scientifically proved to be affected by weather or time of day.")
+        st.info("How long earthquakes last varies depending on the size of the earthquake. Earthquakes may last seconds to minutes. While the shaking of small earthquakes typically lasts only a few seconds, strong shaking during moderate to large earthquakes, such as the 2004 Sumatra earthquake, can lasts couple minutes.")
     elif(eqbns == 'Terminology'):
-        print('x')
+        
 elif(minfo == 'Spotting Natural Disasters'):
     print('Spotting Natural Disasters')
     #sndbns = st.radio("What subtopic do you want to learn about?: ", ('Predicting Earthquakes', 'Why & How Earthquakes Happen', 'Preventing Earthquakes', 'Responding to Earthquakes', 'Where Earthquakes Happen', 'When Earthquakes Happen'))
