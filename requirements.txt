@@ -13,6 +13,8 @@ urllib3 1.26.14
 array module
 scikit-learn 1.2.1
 ml8
+streamlit-folium 0.11.1
+folium 0.14.0
 
 A good internet connection (WiFi)
 A good amount of RAM for when you are training the model
