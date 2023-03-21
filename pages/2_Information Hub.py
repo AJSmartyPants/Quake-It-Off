@@ -18,41 +18,42 @@ st.header("Get information about natural disasters, how to recognize them, what 
 st.markdown("You may have to scroll down to see the information")
 
 minfo = st.selectbox("Please choose what you would like to learn about: ",
-['None selected','Earthquakes', 'Spotting Natural Disasters', 'Safety Tips', 'Relevant First Aid'], index = 0)
+['None selected','Earthquakes', 'Spotting Earthquakes', 'Safety Tips', 'Relevant First Aid'], index = 0)
 weqhi = pd.DataFrame(columns=['Type of Earthquake', 'Cause'])
 weqhi['Type of Earthquake'] = ['Tectonic Earthquake', 'Volcanic Earthquake', 'Collapse Earthquake', 'Explosion Earthquake']
 weqhi['Cause'] = ["The movement of tectonic plates is a geological fault that causes the earth's crust to break, resulting in an earthquake.", "Volcanic activities can cause disruptions on the earth's surface, causing shifts in the tectonic plates, and resulting in earthquakes.", "Human activities such as mining, tunnel, construction, etc. can produce seismic waves, which can cause earthquakes.", "The force that releases when a nuclear or chemical device is launched can cause earthquakes."]
 terminology = pd.DataFrame(columns=['Term', 'Meaning'])
 terminology['Term'] = ['Earthquake', 'Magnitude', 'Intensity', 'Focus or hypocenter', 'Epicenter', 'Body Waves', 'P wave & S wave', 'Shallow Focus Earthquake', 'Teleseism', 'Microseism', 'Micro earthquake', 'Accelogram', 'Accelograph', 'Focal Distance', 'Intermediate Focus Earthquake', 'Epicentral Distance', 'Foreshocks', 'Aftershocks', 'Benioff Zone', 'Destructive boundary', 'Fault', 'Active fault', 'Liquefaction', 'Magnitude/frequency relationship', 'Richter Scale', 'Rossi-Forrel Scale', 'Seismometer', 'Seismograph', 'Tsunami']
 terminology['Meaning'] = [
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    ""
+    "It is a transient violent movement of the Earth's surface that follows a release of energy in the Earth's crust.",
+    "It is a measure of the amount of energy released during an earthquake and expressed by Richter scale.",
+    "Intensity is a qualitative measure of the actual shaking at a location during an Earthquake, and is assigned in Roman Capital Numerical. It refers to the effects of earthquakes. Modified Mercalli scale is the standard measurement. The intensity scale is based on the features of shaking, perception by people and animals, performance of buildings, and changes to natural surroundings.",
+    "It is the point within the earth where an earthquake rupture starts",
+    "It is the point on the earth's surface vertically above the hypocenter, point in the crust.",
+    "They move through the interior of the earth, as opposed to surface waves that ravel near the earth's surface.",
+    "A P wave, or compressional wave, shakes the ground back and forth in the same direction and the opposite direction in the direction the wave is moving. An S wave, or shear wave, shakes the ground back and forth perpendicular to the direction the wave is moving. S wave can travel only through solids.",
+    "Earthquakes of focus less than 70 km deep from ground surface are called shallow focus earthquakes.",
+    "A teleseism is an earthquake recorded by a seismograph at a distance. By international convention the distance is over 1000 Kilometers from the epicenter.",
+    "These are more or less continuous disturbances in the ground recorded by seismographs.",
+    "A very small earthquake having a magnitude measurable less than three on Richter scale is called a Micro-earthquake.",
+    "The ground acceleration record produced by Accelerograph is called Accelerogram.",
+    "This is an earthquake-recording device designed to measure the ground motion in terms of acceleration in the epicentral region of strong shaking.",
+    "The straight-line distance between the places of recording/observation to the hypocenter is called the focal distance.",
+    "When the focus of an Earthquake is between 70 to 300 km deep it is termed as Intermediate Focus Earthquake.",
+    "Distance between epicenter and recording station(in km) is termed as Epicentral Distance.",
+    "Smaller earthquakes preceding the main earthquake results in the generation of Foreshocks.",
+    "Smaller earthquakes following the main earthquake results in the development of aftershocks.",
+    "A region of earthquake activity inclined at an angle underneath a destructive boundary.",
+    "A part of the earth's crust where tectonic plates move towards one another, resulting in the seduction of one below the other.",
+    "A fracture in the rocks along which strain is occasionally released as an earthquake.",
+    "Faults considered to be active if they have moved one or more time in the last 10000 years.",
+    "The process by which sediments and soil collapse, behaving like a thick liquid when shaken by earthquake waves.",
+    "The observed relationship (with most hazards) that bigger scale events occur less frequently while smaller scale events are relatively common.",
+    "A measure of earthquake magnitude allowing an estimate of energy levels involved.",
+    "An observational scale for measuring earthquake intensity. This was improved and expanded by Mercalli to produce the 'Modified Mercalli Scale'.",
+    "An instrument for detecting and recording earthquake waves.",
+    "A printout from a seismometer. Studies of seismograph traces can be used to pinpoint both the epicenter of an earthquake and the nature of the fault movement.",
+    "An earthquake generated sea wave. Can travel thousands of miles and reach many metres in height when approaching shallow water."
 ]
 #print(weqhi)
 if(minfo == 'Earthquakes'):
@@ -130,11 +131,20 @@ if(minfo == 'Earthquakes'):
         st.info("Earthquakes occur when tectonic plates struggle against each other, or due to other reasons that you can refer to in the 'Why & How Earthquakes Happen' subtopic. They can happen anytime, day or night, and are not yet scientifically proved to be affected by weather or time of day.")
         st.info("How long earthquakes last varies depending on the size of the earthquake. Earthquakes may last seconds to minutes. While the shaking of small earthquakes typically lasts only a few seconds, strong shaking during moderate to large earthquakes, such as the 2004 Sumatra earthquake, can lasts couple minutes.")
     elif(eqbns == 'Terminology'):
-        
-elif(minfo == 'Spotting Natural Disasters'):
-    print('Spotting Natural Disasters')
-    #sndbns = st.radio("What subtopic do you want to learn about?: ", ('Predicting Earthquakes', 'Why & How Earthquakes Happen', 'Preventing Earthquakes', 'Responding to Earthquakes', 'Where Earthquakes Happen', 'When Earthquakes Happen'))
+        st.table(terminology)
+elif(minfo == 'Spotting Earthquakes'):
+    st.info("There are sometimes signs that a large earthquake is coming. There may be small quakes, called foreshocks. These can occur a few seconds to a few weeks before a major quake. Unfortunately, foreshocks are not very useful for predicting large earthquakes. Many quakes do not have foreshocks. Also, small earthquakes are not necessarily followed by a large earthquake.")
+    st.info("There are other possible signs before an earthquake. The ground may tilt. Ground tilting is caused by the buildup of stress in the rocks. This may happen before a large earthquake, but it doesn't always. Water levels in wells may fluctuate. This is because water may move into or out of fractures before an earthquake. This is also an uncertain way to predict an earthquake. The difference in arrival times of P-waves and S-waves may decrease just before an earthquake occurs.")
+    st.info("Folklore tells of animals behaving strangely just before an earthquake. Most people tell stories of these behaviors after the earthquake. Chinese scientists have actively studied the behavior of animals before earthquakes to see if there is a connection. So far nothing concrete has come of these studies.")
+    st.info("Actions can reduce the damage once an earthquake has started. Seismometers can detect P-waves a few seconds before more damaging S-waves and surface waves arrive. In this time computers can shut down gas mains and electrical transmission lines. They can initiate protective measures in chemical plants, nuclear power plants, mass transit systems, airports, and roadways. Just a few seconds can be tremendously valuable.")
 elif(minfo == 'Safety Tips'):
-    print('Safety Tips Selected')
+    st.info("Check the 'Responding to Earthquakes' subtopic under the 'Earthquakes' topic! That has all the safety tips you need.")
 else:
-    print('Relevant First Aid chosen')
+    st.info("If you are trapped by falling items or a collapse, protect your mouth, nose, and eyes from dust. If you are bleeding, put pressure on the wound and elevate the injured part. Signal for help with your emergency whistle, a cell phone, or knock loudly on solid pieces of the building, three times every few minutes. Rescue personnel will be listening for such sounds.")
+    st.warning("If a person is bleeding, put direct pressure on the wound. Use clean gauze or cloth, if available.\
+                \nIf a person is not breathing, administer rescue breathing.\
+                \nIf a person has no pulse, begin CPR (cardiopulmonary resuscitation).\
+                \nDo not move seriously injured persons unless they are in immediate danger of further injury.\
+                \nCover injured persons with blankets or additional clothing to keep them warm.\
+                \nGet medical help for serious injuries.\
+                \nCarefully check children or others needing special assistance.")
