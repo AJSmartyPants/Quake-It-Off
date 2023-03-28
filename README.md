@@ -90,7 +90,7 @@ The user manual has all the details of the project, and how to use it:
 
 Be sure to go through it!
 
-Here is my project video: [https://www.youtube.com/watch?v=9SH10BF8O3k](https://www.youtube.com/watch?v=9SH10BF8O3k)
+Here is my project video: [https://youtu.be/uUNIkcI2-Yk](https://youtu.be/uUNIkcI2-Yk)
 
 Enjoy!
 
