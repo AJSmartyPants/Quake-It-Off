@@ -2,12 +2,10 @@ import streamlit as st
 import pandas as pd
 import urllib.request
 import json
-import plotly.express as px
-import geocoder
-import pydeck as pdk
 import folium
 import streamlit_folium as st_folium
 import requests
+import streamlit_js_eval
 
 st.set_page_config(
     page_title="Quake It Off - Recommended Evacuation Routes",
@@ -16,17 +14,26 @@ st.set_page_config(
 st.header("Recommended Evacuation Routes")
 st.markdown("Connected with TrueWay Directions to provide fast and safe routes for evacuation")
 
-location_div = st.empty()
-location_div.markdown("<div id='location'></div>", unsafe_allow_html=True)
-ulatitude = ''
-ulongitude = ''
-g = geocoder.ip('me')
-ulatitude = g.latlng[0]
-ulongitude = g.latlng[1]
+location = streamlit_js_eval.get_geolocation()
+global ulatitude
+global ulongitude
+if st.button("Refresh Location/Prediction", key="refresh_location_button"):
+        #streamlit_js_eval.get_geolocation()
+        try:
+            ulatitude = float(location['coords']['latitude'])
+            ulongitude = float(location['coords']['longitude'])
+        except:
+            st.warning("Loading")
+try:
+    ulatitude = float(location['coords']['latitude'])
+    ulongitude = float(location['coords']['longitude'])
+except:
+    st.warning("Loading")
+print(ulatitude, ulongitude)
 
 if st.button("Refresh Location"):
-    ulatitude = g.latlng[0]
-    ulongitude = g.latlng[1]
+    ulatitude = float(location['coords']['latitude'])
+    ulongitude = float(location['coords']['longitude'])
 
 st.write("Click a point on the map where you want to evacuate. A blue line will be drawn, showing you the most convenient route possible. Stay clear of earthquakes highlighted with pointers! 📌🗺️")
 st.write("When you click on the point, a second map will be generated below. That is where the route will be visible.")

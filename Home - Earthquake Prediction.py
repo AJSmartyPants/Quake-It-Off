@@ -1,6 +1,5 @@
 # import module
 import streamlit as st
-import geocoder
 import pandas as pd
 import pickle
 import numpy as np
@@ -9,7 +8,9 @@ import time
 #import folium
 import json
 import urllib.request
-#import requests
+import requests
+import streamlit_js_eval
+from geopy.geocoders import Nominatim
 #import plotly.graph_objects as go
 from array import *
 #from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration, VideoProcessorBase
@@ -33,25 +34,32 @@ st.subheader("View the current earthquakes happening (or recently happened) acro
 st.markdown("We use your location for prediction, so if this feature is not working, please enable access to location. Your data is safe and deleted when unrequired, so don't worry!")
 st.markdown("You may have to scroll down to see all the information.")
 
-location_div = st.empty()
-location_div.markdown("<div id='location'></div>", unsafe_allow_html=True)
-latitude = ''
-longitude = ''
-g = geocoder.ip('me')
-latitude = g.latlng[0]
-longitude = g.latlng[1]
-country = g.country
-#print(country)
-#print(latitude, longitude)
-if st.button("Refresh Location/Prediction"):
-    latitude = g.latlng[0]
-    longitude = g.latlng[1]
-    #print(latitude, longitude)
-    #print(time.time())
-ydf = pd.DataFrame({'LATITUDE': [latitude], 'LONGITUDE': [longitude]})
+location = streamlit_js_eval.get_geolocation()
+geolocator = Nominatim(user_agent="geoapiExercises")
+global latitude
+global longitude
+if st.button("Refresh Location/Prediction", key="refresh_location_button"):
+        #streamlit_js_eval.get_geolocation()
+        try:
+            latitude = float(location['coords']['latitude'])
+            longitude = float(location['coords']['longitude'])
+            cloc = geolocator.reverse(str(latitude) + "," + str(longitude))
+            address = cloc.raw['address']
+            country = address.get('country_code')
+        except:
+            st.warning("Loading")
+try:
+    latitude = float(location['coords']['latitude'])
+    longitude = float(location['coords']['longitude'])
+    cloc = geolocator.reverse(str(latitude) + "," + str(longitude))
+    address = cloc.raw['address']
+    country = address.get('country_code')
+except:
+    st.warning("Loading")
+print(latitude, longitude, country)
 
-model = pickle.load(open("EQPModel.pkl", 'rb'))
-print(time.time())
+urllll = "https://drive.google.com/uc?id=1T4tijHQf-x1GtpHfHUrnJf8u6L0i9CTm&confirm=t&uuid=94c7bee5-45c6-47f5-a8b0-1e264ed3f09e&at=ANzk5s7VBkWTzG0f9S2Ufs8AmqOR:1680423552901"
+model = pickle.loads(requests.get(urllll).content)
 inputx = np.reshape([latitude, longitude, time.time()], (1, -1))
 predictions = model.predict(inputx)
 preds = pd.DataFrame(predictions, columns=['Depth', 'Magnitude'], index = None)
@@ -60,7 +68,7 @@ print(predictions, preds)
 st.subheader("Current predictions:")
 eqpdepth = preds.iloc[0]['Depth']
 eqpmag = round(preds.iloc[0]['Magnitude'], 1)
-if(g.country == 'IN' or 'QA' or 'SA' or 'AD' or 'SE' or 'NO' or 'FI' or 'MT' or 'BB'):
+if(country == 'qa' or 'sa' or 'ad' or 'se' or 'no' or 'fi' or 'mt' or 'bb'):
     st.success("Low chance of earthquake happening at your location at the current time. If one does occur, here is the prediction: ")
 st.write("Depth: ",str(eqpdepth))
 st.write("Magnitude: ",str(eqpmag))
@@ -294,7 +302,7 @@ if (eqmap == "Choose the Range"):
         fmap = st.plotly_chart(fig, theme=None, use_container_width=True)
 
 st.subheader("Future predictions:")
-if(g.country == 'IN' or 'QA' or 'SA' or 'AD' or 'SE' or 'NO' or 'FI' or 'MT' or 'BB'):
+if(country == 'in' or 'qa' or 'sa' or 'ad' or 'se' or 'no' or 'fi' or 'mt' or 'bb'):
         st.success("Low chance of any earthquakes happening at your location.")
 counter = 0
 while counter<=6:
