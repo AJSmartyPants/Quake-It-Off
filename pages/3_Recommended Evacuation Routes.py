@@ -17,8 +17,7 @@ st.markdown("Connected with TrueWay Directions to provide fast and safe routes f
 location = streamlit_js_eval.get_geolocation()
 global ulatitude
 global ulongitude
-if st.button("Refresh Location/Prediction", key="refresh_location_button"):
-        #streamlit_js_eval.get_geolocation()
+if st.button("Refresh Location", key="refresh_location_button"):
         try:
             ulatitude = float(location['coords']['latitude'])
             ulongitude = float(location['coords']['longitude'])
@@ -30,10 +29,6 @@ try:
 except:
     st.warning("Loading")
 print(ulatitude, ulongitude)
-
-if st.button("Refresh Location"):
-    ulatitude = float(location['coords']['latitude'])
-    ulongitude = float(location['coords']['longitude'])
 
 st.write("Click a point on the map where you want to evacuate. A blue line will be drawn, showing you the most convenient route possible. Stay clear of earthquakes highlighted with pointers! 📌🗺️")
 st.write("When you click on the point, a second map will be generated below. That is where the route will be visible.")
@@ -103,7 +98,7 @@ folium.Marker(
 ).add_to(m)
 
 apiurl = "https://trueway-directions2.p.rapidapi.com/FindDrivingRoute"
-urlparams = (str((str(ulatitude)+','+str(ulongitude))))+';'+str(data)[1:-1]
+urlparams = (str((str(float(ulatitude))+','+str(float(ulongitude)))))+';'+str(data)[1:-1]
 #print(urlparams)
 querystring = {"stops":urlparams,"optimize":"true","avoid_ferries":"true","avoid_tolls":"true"}
 
@@ -115,6 +110,7 @@ headers = {
 response = requests.request("GET", apiurl, headers=headers, params=querystring)
 #print(response.text)
 datatouse = json.loads(response.text)
+print(datatouse)
 route = datatouse["route"]
 #steps = route["legs"][0]["steps"]
 
