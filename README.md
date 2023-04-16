@@ -95,13 +95,6 @@ The user manual has all the details of the project, and how to use it:
 
 Be sure to go through it!
 
-My pitch video: 
-My demo video: 
-
-Here is my extended project video that I made for Clevered: [https://youtu.be/uUNIkcI2-Yk](https://youtu.be/uUNIkcI2-Yk)
-
-Enjoy!
-
 *I'm Anika, a 13-year-old learning enthusiast and a female philomath. I work in an NGO (Distressed Children and Infants International). My main commendable titles and laurels are below. I love learning, and my fields of interest lie in physics, chemistry, math, programming, and literature! I am a confident self-learner. People have told me that I have incredible leadership skills and quality cognitive ability. I enjoy reading, swimming, and ice-skating in my free time.*
 
 *• Developer of the Grand Prize Winner app: cHHange - It's Normal*
