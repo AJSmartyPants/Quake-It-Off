@@ -8,7 +8,7 @@ Because of an earthquake, millions of people suffer, property is wrecked, and wh
 
 Between 1998-2017, earthquakes caused nearly 750,000 deaths globally, more than half of all deaths related to natural disasters. More than 125 million people were affected by earthquakes during this time period, meaning they were injured, made homeless, displaced or evacuated during the emergency phase of the disaster.
 
-Just a month ago, devastating earthquakes in Turkey and Syria have resulted in over 45000 deaths in Turkey, and over 6000 in Syria. At least 1.5 million people are now homeless, and it's unclear how long it will take to find them proper shelter.
+In February this year, devastating earthquakes in Turkey and Syria have resulted in over 45000 deaths in Turkey, and over 6000 in Syria. At least 1.5 million people are now homeless, and it's unclear how long it will take to find them proper shelter.
 
 The problem is NOW. And we must act. Quake It Off: Predict, Analyze, Learn, Prepare, and Prevent
 
@@ -18,7 +18,7 @@ Quake It Off has 5 main features:
 
 1. Predicts earthquakes and their impact
 
-2. Provides ways for the user to know if they are in danger zones of an earthquake
+2. Provides ways for the user to know if they are in danger zones of an earthquake, and provides reliable donation centers for the user to contribute
 
 3. Recommends the most effective routes and strategies for shelter and responding to a disaster
 
@@ -34,7 +34,8 @@ The factors are totally independent parameters, and I recognize that: Quake It O
 
 It's better to have false alarms when an earthquake is predicted but one doesn't occur, than to have no idea for when an earthquake is not predicted, but one occurs. Like we always say, better safe than sorry.
 
-The best part is: Our predictions are catered to those with anxiety and stress as well. On the app, I clarify that these predictions mean to warn. 
+The best part is: Our predictions are catered to those with anxiety and stress as well. On the app, I clarify that these predictions mean to warn.
+The predictions go up to a week from the current day, and also provide current predictions.
 ![Home Page Image 1](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/HomePage1.png?raw=true)
 ![Home Page Image 2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/HomePage2.png?raw=true)
 
@@ -44,7 +45,7 @@ Everything is customizable, accessible, and easy to interpret!
 ![Map Example 1](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Map1.png?raw=true)
 ![Map Example 2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Map2.png?raw=true)
 
-The Information Hub provides lots of vital information about earthquakes, safety, how to do first aid, terminology, and more. A drop-down allows you to choose a main topic, and subtopic in some cases. The information is presented as multimedia, with helpful infographics and images alongside readable and concise textual knowledge.
+The Information Hub provides lots of vital information about earthquakes, safety, how to do first aid, terminology, and more. A drop-down allows you to choose a main topic, and subtopic in some cases. The information is presented as multimedia, with helpful infographics and images alongside readable and concise textual knowledge. Additionally, you can easily share content with your family members and friends with the share feature at the top right. The screenshots below were taken back when the share feature wasn't added, but it's there now!
 
 ![InfoHub1](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub1.png?raw=true) 
 ![InfoHub2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub2.png?raw=true)
@@ -55,31 +56,35 @@ The Route Recommendation section uses Artificial Intelligence, along with real-t
 ![Route Selection Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Route1.png?raw=true)
 ![Route Output Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Route2.png?raw=true)
 
+Finally, the Share & Donate page provides the user with trustworthy donation sites and centers for earthquake relief, along with a map that plots the best donation centers. This feature helps build a community!
+
+![Share & Donate page Top 10 Donation Sites](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/ShareDonate1.png?raw=true)
+![Donation Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/ShareDonate2.png?raw=true)
+
 Notifications are coming soon!
 
-Speaking of which, here are the future plans for this highly applicable app:
+Speaking of which, here are the top 3 future plans for this highly applicable app:
  - Improve model accuracy and include better factors: This will be done in many ways. Firstly, we will need more factors, rather than the unrelated 3 factors of latitude, longitude, and time, and more data. Seismic interactions, and live seismic wave data will be vital to predict an actual earthquake or alert the user. Connecting with initiatives, organizations, and scientists can help achieve this. Additionally, using a better, stronger, and more neural-network based machine learning algorithm could also help.
-
-- Publish Quake It Off. Other future plans rely on this to happen.
-
-- Make it available on all devices: Quake It Off currently uses Streamlit, making it a web application. The great thing about Streamlit is that it automatically resizes content to fit a device's screen, so all that's left to do is publish the web app!
 
 - Notification system: I need to develop a notification system for Quake It Off to alert the user during an earthquake at or nearby their location. This will only be possible once the app is published.
 
-- Make it available offline: Quake It Off currently requires WiFi to work as the real-time APIs are online. But, I aim to make it available offline by using some system that can connect to the APIs/datasets on its own.
+- Improve the Route Recommendation feature and make it akin to Google Maps
 
 Here is a brief competitor analysis that clearly shows that Quake It Off uses brand-new technologies and novel ideas to solve this real-world problem:
 
 ![Brief Competitor Analysis Table](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/CompetitorAnalysis.png?raw=true)
 
-Creating this application was no easy feat, to say the least. I spent long days and nights, working around the clock, and racing against the universe, to finish it in 2 weeks! That too, with NO PRIOR KNOWLEDGE about machine learning! My Clevered mentor, Ms. Shivani, was the one who brought me into the deep, intense, intricate, and infinite-possibility world of AI and ML. It was like stepping onto the tip of the iceberg, only to notice that under the water, the iceberg never ended!
+Creating this application was no easy feat, to say the least. I spent long days and nights, working around the clock, and racing against the universe, to finish it in time! That too, with NO PRIOR KNOWLEDGE about machine learning! My Clevered mentor, Ms. Shivani, who was the instructor of the course I did before starting the creation of this app, was the one who brought me into the deep, intense, intricate, and infinite-possibility world of AI and ML. It was like stepping onto the tip of the iceberg, only to notice that under the water, the iceberg never ended!
+My Technovation mentor, Mr. Vivek, helped me a lot with the entrepreneurship and feature-refining of the app! I couldn't have made it without him.
 
 A huge shoutout to Dr. Ken Kahn for his irreplaceable and valuable insights into my project.
 
 I am so proud of Quake It Off, and I hope my efforts can greatly contribute to the world of earthquake prediction and efficient disaster response.
 
-Please check out the GitHub repository for my project:
+Quake It Off is published as a web application! Start using it today:
+[Quake It Off - A Web App that runs on all devices with geolocation in their browser](https://quakeitoff.streamlit.app/)
 
+Please check out the GitHub repository for my project:
 [https://github.com/AJSmartyPants/Quake-It-Off](https://github.com/AJSmartyPants/Quake-It-Off)
 
 The requirements.txt file specifies all the libraries you will need to run the project.
@@ -90,7 +95,10 @@ The user manual has all the details of the project, and how to use it:
 
 Be sure to go through it!
 
-Here is my project video: [https://youtu.be/uUNIkcI2-Yk](https://youtu.be/uUNIkcI2-Yk)
+My pitch video: 
+My demo video: 
+
+Here is my extended project video that I made for Clevered: [https://youtu.be/uUNIkcI2-Yk](https://youtu.be/uUNIkcI2-Yk)
 
 Enjoy!
 
