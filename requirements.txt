@@ -15,6 +15,11 @@ scikit-learn 1.2.1
 ml8
 streamlit-folium 0.11.1
 folium 0.14.0
+geopy 2.3.0
+streamlit_js_eval 0.1.5
+pillow 9.4.0
+openpyxl 3.1.2
 
 A good internet connection (WiFi)
 A good amount of RAM for when you are training the model
+I installed the dependencies with pip, so if you plan to do the same, you may also need to download pip and add it to your PATH
