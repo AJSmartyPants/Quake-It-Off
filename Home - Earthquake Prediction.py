@@ -13,11 +13,13 @@ import streamlit_js_eval
 from geopy.geocoders import Nominatim
 #import plotly.graph_objects as go
 from array import *
+from PIL import Image
 #from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration, VideoProcessorBase
 
+appicon = Image.open(requests.get("https://github.com/AJSmartyPants/Quake-It-Off/raw/main/Images/QuakeItOffFinalLogo.png", stream=True).raw)
 st.set_page_config(
     page_title="Quake It Off - Home",
-    page_icon='🌎'
+    page_icon=appicon
 )
 
 st.sidebar.subheader("Select page above")

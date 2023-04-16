@@ -6,10 +6,12 @@ import folium
 import streamlit_folium as st_folium
 import requests
 import streamlit_js_eval
+from PIL import Image
 
+appicon = Image.open(requests.get("https://github.com/AJSmartyPants/Quake-It-Off/raw/main/Images/QuakeItOffFinalLogo.png", stream=True).raw)
 st.set_page_config(
     page_title="Quake It Off - Recommended Evacuation Routes",
-    page_icon='🌍'
+    page_icon=appicon
 )
 st.header("Recommended Evacuation Routes")
 st.markdown("Connected with TrueWay Directions to provide fast and safe routes for evacuation")
@@ -110,7 +112,7 @@ headers = {
 response = requests.request("GET", apiurl, headers=headers, params=querystring)
 #print(response.text)
 datatouse = json.loads(response.text)
-print(datatouse)
+#print(datatouse)
 route = datatouse["route"]
 #steps = route["legs"][0]["steps"]
 
@@ -131,4 +133,4 @@ m.add_child(folium.PolyLine(
     weight=5,
     opacity=1
 ))
-mappp = st_folium.st_folium(m, height=725, width=725)
+mappp = st_folium.folium_static(m, height=725, width=725)
