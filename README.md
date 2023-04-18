@@ -51,7 +51,7 @@ The Information Hub provides lots of vital information about earthquakes, safety
 ![InfoHub2](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub2.png?raw=true)
 ![InfoHub3](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/InfoHub3.png?raw=true)
 
-The Route Recommendation section uses Artificial Intelligence, along with real-time earthquake data, to determine and recommend the safest routes to evacuate an earthquake-affected or earthquake-prone area.
+The Route Recommendation section uses Artificial Intelligence, along with real-time earthquake data, to determine and recommend the safest routes to evacuate an earthquake-affected or earthquake-prone area. *Please note: If you want to run this code locally, follow the instructions in the user manual. You will need to make your own RapidAPI TrueWay Directions API key
 
 ![Route Selection Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Route1.png?raw=true)
 ![Route Output Map](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/Route2.png?raw=true)
