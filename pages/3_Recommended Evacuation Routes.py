@@ -105,7 +105,7 @@ urlparams = (str((str(float(ulatitude))+','+str(float(ulongitude)))))+';'+str(da
 querystring = {"stops":urlparams,"optimize":"true","avoid_ferries":"true","avoid_tolls":"true"}
 
 headers = {
-	"X-RapidAPI-Key": "55588fff42msh38648ac92f61898p1bc6a2jsnea83869aa07a",
+	"X-RapidAPI-Key": "MAKE_YOUR_OWN_API_KEY_FOR_TRUEWAY_DIRECTIONS_API_ON_RAPIDAPI",
 	"X-RapidAPI-Host": "trueway-directions2.p.rapidapi.com"
 }
 
