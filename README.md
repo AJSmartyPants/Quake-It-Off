@@ -68,13 +68,13 @@ Speaking of which, here are the top 3 future plans for this highly applicable ap
 
 - Notification system: I need to develop a notification system for Quake It Off to alert the user during an earthquake at or nearby their location. This will only be possible once the app is published.
 
-- Improve the Route Recommendation feature and make it akin to Google Maps
+- Improve the Route Recommendation feature with directions, customizability, etc.
 
 Here is a brief competitor analysis that clearly shows that Quake It Off uses brand-new technologies and novel ideas to solve this real-world problem:
 
 ![Brief Competitor Analysis Table](https://github.com/AJSmartyPants/Quake-It-Off/blob/main/Images/CompetitorAnalysis.png?raw=true)
 
-Creating this application was no easy feat, to say the least. I spent long days and nights, working around the clock, and racing against the universe, to finish it in time! That too, with NO PRIOR KNOWLEDGE about machine learning! My Clevered mentor, Ms. Shivani, who was the instructor of the course I did before starting the creation of this app, was the one who brought me into the deep, intense, intricate, and infinite-possibility world of AI and ML. It was like stepping onto the tip of the iceberg, only to notice that under the water, the iceberg never ended!
+Creating this application was no easy feat, to say the least. I spent long days and nights, working around the clock, and racing against the universe, to finish it in time! That too, with NO PRIOR KNOWLEDGE about machine learning! It was like stepping onto the tip of the iceberg, only to notice that under the water, the iceberg never ended.
 My Technovation mentor, Mr. Vivek, helped me a lot with the entrepreneurship and feature-refining of the app! I couldn't have made it without him.
 
 A huge shoutout to Dr. Ken Kahn for his irreplaceable and valuable insights into my project.
@@ -88,29 +88,3 @@ Please check out the GitHub repository for my project:
 [https://github.com/AJSmartyPants/Quake-It-Off](https://github.com/AJSmartyPants/Quake-It-Off)
 
 The requirements.txt file specifies all the libraries you will need to run the project.
-
-The user manual has all the details of the project, and how to use it:
-
-[https://www.canva.com/design/DAFdi\_mfC9E/Vf3fc1s5hpsr8OMTfVygUw/view?utm\_content=DAFdi\_mfC9E&utm\_campaign=designshare&utm\_medium=link&utm\_source=publishsharelink](https://www.canva.com/design/DAFdi_mfC9E/Vf3fc1s5hpsr8OMTfVygUw/view?utm_content=DAFdi_mfC9E&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
-
-Be sure to go through it!
-
-*I'm Anika, a 13-year-old learning enthusiast and a female philomath. I work in an NGO (Distressed Children and Infants International). My main commendable titles and laurels are below. I love learning, and my fields of interest lie in physics, chemistry, math, programming, and literature! I am a confident self-learner. People have told me that I have incredible leadership skills and quality cognitive ability. I enjoy reading, swimming, and ice-skating in my free time.*
-
-*• Developer of the Grand Prize Winner app: cHHange - It's Normal*
-
-*• International winner in the OakCodeFest 24-hour hackathon twice*
-
-*• International winner in the TISBHacks hackathon*
-
-*• Ted-ED speaker: [https://youtu.be/MPZkbC9kM8A](https://youtu.be/MPZkbC9kM8A)*
-
-*• 3-time Best Delegate of Model United Nations*
-
-*• Author of 2 books*
-
-*• India's Top Young Problem Solver (HCL Jigsaw)*
-
-*• Honorary mention title holder in the Johns Hopkins University SCAT math test*
-
-*• National winner in the SpALLENthon Spell Bee*
